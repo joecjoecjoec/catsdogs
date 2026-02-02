@@ -1,0 +1,15 @@
+.venv
+__pycache__/
+.ipynb_checkpoints/
+*.ipynb
+
+data/
+
+models/*.pt
+
+!models/model.pt
+!models/meta.json
+
+
+*.log
+.DS_Store

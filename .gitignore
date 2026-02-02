@@ -1,0 +1,25 @@
+# python
+__pycache__/
+*.pyc
+
+# venv
+.venv/
+venv/
+
+# jupyter
+.ipynb_checkpoints/
+
+# mac
+.DS_Store
+
+# data (do NOT commit dataset)
+data/
+
+# logs
+*.log
+
+# models: ignore big checkpoints, but keep deployment artifacts
+models/*.pt
+!models/model.pt
+!models/meta.json
+!models/results_summary.json
