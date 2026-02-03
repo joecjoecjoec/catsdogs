@@ -109,19 +109,37 @@ Final deployment model is saved to:
 
 ## 6) Training Script (train.py)
 
-The training logic is exported to `train.py`.
+The training logic is exported to `train.py` (script version of the notebook training pipeline).
 
-Example usage (adjust paths/args if needed):
+### Show available options
 
 ```bash
-python train.py
+python train.py --help
 ```
-Expected behavior:
-	•	trains model on data/processed/.../train
-	•	evaluates on validation set
-	•	saves best model to models/model.pt and metadata to models/meta.json
+### Minimal run (smoke test)
 
-Note: training requires the dataset to be present locally (see Dataset section).
+This command trains for 1 epoch to verify the script runs end-to-end:
+
+```bash
+python train.py \
+  --data-dir data/processed/cats_dogs_70_30 \
+  --epochs 1 \
+  --batch-size 16 \
+  --img-size 224 \
+  --num-workers 0 \
+  --out-dir models/debug_run
+```
+
+Expected behavior:
+	•	Loads dataset from --data-dir (expects train/, validation/, test/ subfolders, each with cats/ and dogs/)
+	•	Trains and evaluates the model (validation + test)
+	•	Saves run outputs into --out-dir (e.g., checkpoints and results_summary.json)
+
+Note:
+	•	The dataset is not committed to the repository (too large). Please prepare it locally (see Section 3 Dataset).
+	•	The deployment model artifacts are committed under models/ (e.g., models/model.pt, models/meta.json) so the API/Docker/Render deployment is reproducible without the dataset.
+
+
 
 ## 7) Model Deployment (FastAPI)
 
