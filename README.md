@@ -166,6 +166,7 @@ docker build -t cats-dogs-api:latest .
 ```
 ### Run container
 ```bash
+docker run --rm -p 8000:8000 cats-dogs-api:latest
 ```
 ### Verify
 	•	http://localhost:8000/docs
