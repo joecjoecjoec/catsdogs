@@ -1,0 +1,54 @@
+{
+  "arch": "mobilenet_v3_small",
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "epochs": 1,
+  "early_stop_patience": 3,
+  "min_delta": 0.0,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "results": [
+    {
+      "seed": 1,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "epochs": 1,
+      "best_epoch": 1,
+      "best_val_loss": 0.21511590846797876,
+      "best_val_acc": 0.9035087719298246,
+      "test_acc": 0.875,
+      "test_loss": 0.23586761392652988,
+      "time_sec": 26.56824016571045,
+      "ckpt_path": "/Users/JW/Documents/mlzoomcamp/capstone2-cats-dogs/models/debug_run/mobilenetv3_lr0.0003_wd0.0001_seed1.pt"
+    },
+    {
+      "seed": 2,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "epochs": 1,
+      "best_epoch": 1,
+      "best_val_loss": 0.34511981074485865,
+      "best_val_acc": 0.8771929824561403,
+      "test_acc": 0.828125,
+      "test_loss": 0.45797253225464374,
+      "time_sec": 16.185069799423218,
+      "ckpt_path": "/Users/JW/Documents/mlzoomcamp/capstone2-cats-dogs/models/debug_run/mobilenetv3_lr0.0003_wd0.0001_seed2.pt"
+    },
+    {
+      "seed": 3,
+      "lr": 0.0003,
+      "weight_decay": 0.0001,
+      "epochs": 1,
+      "best_epoch": 1,
+      "best_val_loss": 0.331132939869636,
+      "best_val_acc": 0.8508771929824561,
+      "test_acc": 0.828125,
+      "test_loss": 0.3742981350515038,
+      "time_sec": 16.32888913154602,
+      "ckpt_path": "/Users/JW/Documents/mlzoomcamp/capstone2-cats-dogs/models/debug_run/mobilenetv3_lr0.0003_wd0.0001_seed3.pt"
+    }
+  ]
+}

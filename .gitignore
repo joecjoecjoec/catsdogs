@@ -19,7 +19,11 @@ data/
 *.log
 
 # models: ignore big checkpoints, but keep deployment artifacts
-models/*.pt
+models/**/*.pt
 !models/model.pt
 !models/meta.json
 !models/results_summary.json
+
+# smoke-test artifacts: keep only the tiny summary, ignore debug checkpoints
+models/debug_run/*.pt
+!models/debug_run/results_summary.json
